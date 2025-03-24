@@ -1,0 +1,38 @@
+.productTitle{
+    font-weight: 900;
+}
+/* .productCategory{
+
+} */
+.productPrize{
+    font-size: large;
+}
+button{
+    padding: 5px 10px;
+    font-size: small;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.Singleproduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.leftimg{
+    width: 50%;
+}
+.right{
+    width: 50%;
+}
+.SingleproductTitle{
+    font-size: large;
+}
+.SingleproductCategory{
+    font-size: large;
+}
