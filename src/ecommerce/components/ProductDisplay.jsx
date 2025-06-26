@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { EcomContext } from "./UseContext";
+import { Link } from "react-router-dom";
+
 function trimContent(input) {
   return input.length > 50
     ? input.split(" ").slice(0, 8).join(" ") + "..."
@@ -14,17 +18,19 @@ function trimContent(input) {
 // TEMPLATE LITERAL
 
 function ProductDisplay({ product }) {
+  const { handleAddToCart } = useContext(EcomContext);
+
   return (
     <>
       <div className="product">
         {/* {generateRandomHash(product.id)} */}
-        <a href={`/product/${product.id}`}>
+        <Link to={`/product/${product.id}`}>
           <img src={product.image} alt="" />
-        </a>
+        </Link>
         <div className="content">
           <h3>{trimContent(product.title)}</h3>
           <p>{product.price}</p>
-          <button>Add To Cart</button>
+          {/* <button onClick={() => handleAddToCart(product)}>Add To Cart</button> */}
         </div>
       </div>
     </>

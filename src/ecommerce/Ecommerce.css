@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 header {
   background-color: rebeccapurple;
   color: #fff;
@@ -11,9 +12,15 @@ header {
   align-items: center;
   height: 50px;
 }
+
+header h2 {
+  color: #fff;
+}
+
 header ul {
   display: flex;
 }
+
 header ul a {
   padding: 0 0.25rem;
   margin: 0 0.25rem;
@@ -23,13 +30,16 @@ header ul a {
 a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
+
 header,
 .products {
   padding: 0 3rem;
 }
+
 .products {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -39,6 +49,7 @@ header,
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .products .product {
   width: 23%;
   height: 400px;
@@ -46,8 +57,40 @@ header,
   border-radius: 1rem;
   padding: 1rem;
 }
+
 .products .product img {
   width: 100%;
   height: 50%;
   object-fit: contain;
+}
+
+.left {
+  width: 350px;
+  height: 350px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+}
+
+.singleProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* justify-content: space-around; */
+}
+
+.right {
+  width: 1000px;
+}
+
+.item-controls button {
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
