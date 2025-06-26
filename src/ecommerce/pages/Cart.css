@@ -1,144 +1,139 @@
-
 .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
+  gap: 2.5rem;
+  flex-wrap: wrap; /* make it wrap on smaller screens */
 }
 
 .cart-section {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
+  flex: 1;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
 }
 
 .cart-section h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 0.3125rem;
 }
 
 .cart-section p {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 20px;
+  font-size: 0.875rem;
+  color: gray;
+  margin-bottom: 1.25rem;
 }
 
 .cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 0 0.0625rem 0.3125rem rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap; /* allows better mobile stacking */
 }
 
 .cart-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 15px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-right: 0.9375rem;
 }
 
 .item-details {
-    flex: 1;
+  flex: 1;
+  min-width: 250px; /* ensures it stacks well */
 }
 
 .item-details h3 {
-    font-size: 18px;
-    margin: 0;
+  font-size: 1.125rem;
+  margin: 0;
 }
 
 .item-details p {
-    font-size: 14px;
-    color: #666;
+  font-size: 0.875rem;
+  color: #666;
 }
 
-.item-controls {
-    text-align: right;
+.item-details span {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-right: 0.625rem;
 }
 
-.item-controls span {
+.item-details button {
+  background: transparent;
+  border: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 320px) and (max-width: 570px) {
+  .container {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cart-section {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .cart-section h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .cart-section p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 0.75rem 0;
+    max-width: 250px;
+  }
+
+  .item-details {
+    min-width: 100%;
+  }
+
+  .item-details h3 {
+    font-size: 1rem;
+  }
+
+  .item-details p,
+  .item-details span {
+    font-size: 0.75rem;
+  }
+
+  .item-details span {
     display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
+    margin: 0.25rem 0;
+  }
 
-.item-controls button {
-    background: transparent;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: #e74c3c;
-}
-
-.card-section {
-    width: 350px;
-    background-color: #5f56d6;
-    color: white;
-    padding: 25px;
-    border-radius: 20px;
-}
-
-.card-section h2 {
-    margin-top: 0;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.card-icons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.card-icons button {
-    background-color: white;
-    color: #333;
-    border: none;
-    padding: 8px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.card-section input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-.exp-cvv {
-    display: flex;
-    gap: 10px;
-}
-
-.summary {
-    margin-top: 20px;
-}
-
-.summary p {
-    display: flex;
-    justify-content: space-between;
-    margin: 6px 0;
-    font-size: 14px;
-}
-
-.checkout {
-    margin-top: 20px;
-    width: 100%;
-    padding: 14px;
-    background-color: #34d399;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
+  .item-details button {
+    font-size: 1rem;
+  }
 }

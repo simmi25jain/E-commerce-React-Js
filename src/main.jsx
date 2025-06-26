@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client'
 // import Router from './Router'
 import { Route } from 'react-router-dom'
 import Main from "./ecommerce/Main"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 createRoot(document.getElementById('root')).render(
   <Main/>
